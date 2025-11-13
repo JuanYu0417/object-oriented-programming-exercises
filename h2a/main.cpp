@@ -1,21 +1,20 @@
+#include <windows.h>
 #include "car.h"
 #include "rectangle.h"
 #include "student.h"
 #include <iostream>
 #include <memory>
 
-//#include <windows.h>
-
 using namespace std;
 
 int main()
 {
-    //SetConsoleOutputCP(CP_UTF8);
-    //SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     car objCar("Tesla","Y",2020);
     objCar.printData();
 
-    Rectangle* objRec = new  Rectangle(8.30, 6.50);
+    Rectangle1* objRec = new  Rectangle1(8.30, 6.50);
     objRec->printAreaAndCircum();
     delete objRec;
 
@@ -27,6 +26,9 @@ int main()
     cout<<"Students' Info:"<<endl;
     cout<<"Name:"<<studentPtr->getName()<<", studentNumber:"<<
         studentPtr->getStudentNumber()<<", average:"<<studentPtr->getAverage()<<endl;
+
+
+
     return 0;
 }
 

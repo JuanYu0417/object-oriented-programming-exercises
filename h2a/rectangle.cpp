@@ -1,36 +1,39 @@
 #include "rectangle.h"
 #include <iostream>
+//#include <windows.h>
 using namespace std;
 
-Rectangle::Rectangle(double w, double h){
+Rectangle1::Rectangle1(double w, double h){
     this->width=w;
     this->height=h;
 }
-Rectangle::Rectangle(){}
-double Rectangle::getWidth() const
+Rectangle1::Rectangle1(){}
+double Rectangle1::getWidth() const
 {
     return width;
 }
 
-double Rectangle::getHeight() const
+double Rectangle1::getHeight() const
 {
     return height;
 }
 
-void  Rectangle::setWidth(double w){
+void  Rectangle1::setWidth(double w){
     width=w;
 }
-void  Rectangle::setHeight(double h){
+void  Rectangle1::setHeight(double h){
     height=h;
 }
 
-double  Rectangle::getArea(){
+double  Rectangle1::getArea(){
    return width * height;
 }
-double  Rectangle::getCircum(){
+double  Rectangle1::getCircum(){
     return 2 * (width + height);
 }
 
-void Rectangle::printAreaAndCircum(){
-    std::cout<<"Area="<<width * height<<", circum="<< 2 * (width + height)<<endl;
+void Rectangle1::printAreaAndCircum(){
+    //SetConsoleOutputCP(CP_UTF8);
+    //SetConsoleCP(CP_UTF8);
+    std::cout<<"pinta-ala="<<width * height<<", ympärysmitta="<< 2 * (width + height)<<endl;
 }

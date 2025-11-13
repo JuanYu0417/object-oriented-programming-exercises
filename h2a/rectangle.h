@@ -1,14 +1,14 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-class Rectangle
+class Rectangle1
 {
 private:
     double width;
     double height;
 public:
-    Rectangle(double w, double h);
-    Rectangle();
+    Rectangle1(double w, double h);
+    Rectangle1();
     double getArea();
     double getCircum();
     void setWidth(double);
