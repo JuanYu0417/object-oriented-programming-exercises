@@ -22,9 +22,10 @@ SetConsoleCP(CP_UTF8);
 ```
 changes the console code page globally for the entire process, not just inside the function.
 This means once these functions are called, all subsequent std::cout or std::cin operations in any part of the program will use UTF-8 encoding.
-How to handle**Name conflict** inside main()?
-1.Place #include <windows.h> at the very beginning;
-2.Rename rectangle to rectangle1: This avoids a conflict with the Rectangle() function in the Windows API.
+
+##How to handle**Name conflict** inside main()?##
+  1.Place #include <windows.h> at the very beginning;
+  2.Rename rectangle to rectangle1: This avoids a conflict with the Rectangle() function in the Windows API.
 
 
 
