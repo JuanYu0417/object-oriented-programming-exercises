@@ -1,0 +1,53 @@
+#include "car.h"
+#include <iostream>
+
+string Car::getModel() const
+{
+    return model;
+}
+
+void Car::setModel(const string &newModel)
+{
+    model = newModel;
+}
+
+string Car::getBrand() const
+{
+    return brand;
+}
+
+void Car::setBrand(const string &newBrand)
+{
+    brand = newBrand;
+}
+
+Car::Car(){
+    model="";
+    brand="";
+}
+Car::Car(string b,string m){
+    model=m;
+    brand=b;
+}
+void Car::setEngine(){
+    objEngine.setHorsepower(150);
+    objEngine.setDisplacement(2.0);
+}
+void Car::setWheel(){
+    objWheel1.setSize(17);
+    objWheel1.setType("kesarengas");
+    objWheel2.setSize(17);
+    objWheel2.setType("kesarengas");
+    objWheel3.setSize(17);
+    objWheel3.setType("kesarengas");
+    objWheel4.setSize(17);
+    objWheel4.setType("kesarengas");
+}
+void Car::PrintDetails(){
+    cout<<"Auto: "<<brand<<" ,"<<model<<endl;
+    cout<<"Moottori: "<<objEngine.getHorsepower()<<"hp,"<<objEngine.getDisplacement()<<"L"<<endl;
+    cout<<"Rankangs1: "<<objWheel1.getSize()<<" tuumaa,"<<objWheel1.getType()<<endl;
+    cout<<"Rankangs2: "<<objWheel2.getSize()<<" tuumaa,"<<objWheel2.getType()<<endl;
+    cout<<"Rankangs3: "<<objWheel3.getSize()<<" tuumaa,"<<objWheel3.getType()<<endl;
+    cout<<"Rankangs4: "<<objWheel4.getSize()<<" tuumaa,"<<objWheel4.getType()<<endl;
+}
